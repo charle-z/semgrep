@@ -11,3 +11,5 @@
    LICENSE for more details.
 *)
 val parse : Fpath.t -> (Ast_go.program, unit) Tree_sitter_run.Parsing_result.t
+
+val parse_pattern : string -> (Ast_go.any, unit) Tree_sitter_run.Parsing_result.t

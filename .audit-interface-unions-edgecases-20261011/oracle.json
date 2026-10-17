@@ -1,0 +1,177 @@
+{
+  "paren_int": {
+    "valid": true,
+    "term": "(int) | ~[]byte",
+    "diagnostic": []
+  },
+  "approx_paren_int": {
+    "valid": true,
+    "term": "~(int) | string",
+    "diagnostic": []
+  },
+  "paren_slice": {
+    "valid": true,
+    "term": "([]byte) | ~map[string]bool",
+    "diagnostic": []
+  },
+  "paren_approx_slice": {
+    "valid": true,
+    "term": "~([]byte) | ~map[string]bool",
+    "diagnostic": []
+  },
+  "paren_pointer": {
+    "valid": true,
+    "term": "~(*int) | ~[]byte",
+    "diagnostic": []
+  },
+  "paren_nested": {
+    "valid": true,
+    "term": "~(([]byte)) | ~int",
+    "diagnostic": []
+  },
+  "pointer_generic": {
+    "valid": true,
+    "term": "*Box[int] | ~[]byte",
+    "diagnostic": []
+  },
+  "pointer_generic_paren": {
+    "valid": true,
+    "term": "*(Box[int]) | ~[]byte",
+    "diagnostic": []
+  },
+  "paren_generic": {
+    "valid": true,
+    "term": "(Box[int]) | ~[]byte",
+    "diagnostic": []
+  },
+  "map_nested_struct": {
+    "valid": true,
+    "term": "~map[string]struct{A int} | ~[]byte",
+    "diagnostic": []
+  },
+  "slice_nested_generic": {
+    "valid": true,
+    "term": "~[]Box[int] | ~map[string]int",
+    "diagnostic": []
+  },
+  "nested_two_generics": {
+    "valid": true,
+    "term": "Box[map[string]int] | Box[[]int]",
+    "diagnostic": []
+  },
+  "generic_union_complex": {
+    "valid": true,
+    "term": "Pair[Box[int],Box[string]] | ~[]byte",
+    "diagnostic": []
+  },
+  "channel_send": {
+    "valid": true,
+    "term": "~chan<- int | ~[]byte",
+    "diagnostic": []
+  },
+  "channel_recv": {
+    "valid": true,
+    "term": "~<-chan string | ~[]byte",
+    "diagnostic": []
+  },
+  "channels_both": {
+    "valid": true,
+    "term": "~<-chan int | ~chan<- string",
+    "diagnostic": []
+  },
+  "function_variadic": {
+    "valid": true,
+    "term": "~func(...int) | ~map[string]int",
+    "diagnostic": []
+  },
+  "function_multi_result": {
+    "valid": true,
+    "term": "~func() (int,error) | ~map[string]int",
+    "diagnostic": []
+  },
+  "function_nested": {
+    "valid": true,
+    "term": "~func(chan int) map[string]int | ~[]byte",
+    "diagnostic": []
+  },
+  "pointer_array": {
+    "valid": true,
+    "term": "~*[2]int | ~[]byte",
+    "diagnostic": []
+  },
+  "pointer_struct": {
+    "valid": true,
+    "term": "*struct{A int} | ~[]byte",
+    "diagnostic": []
+  },
+  "pointer_struct_approx": {
+    "valid": true,
+    "term": "~*struct{ A int } | ~[]byte",
+    "diagnostic": []
+  },
+  "nested_struct_term": {
+    "valid": true,
+    "term": "~struct{F func() int} | ~map[string]int",
+    "diagnostic": []
+  },
+  "struct_multiline": {
+    "valid": true,
+    "term": "~struct{A int; B string} | ~[]byte",
+    "diagnostic": []
+  },
+  "struct_without_tilde": {
+    "valid": true,
+    "term": "struct{A int} | string",
+    "diagnostic": []
+  },
+  "struct_with_pointer_field": {
+    "valid": true,
+    "term": "struct{F *int} | string",
+    "diagnostic": []
+  },
+  "array_of_struct": {
+    "valid": true,
+    "term": "~[3]struct{A int} | ~[]byte",
+    "diagnostic": []
+  },
+  "union_with_interface_literal": {
+    "valid": true,
+    "term": "interface{~int} | ~[]byte",
+    "diagnostic": []
+  },
+  "union_with_any": {
+    "valid": true,
+    "term": "interface{} | ~[]byte",
+    "diagnostic": []
+  },
+  "union_with_named_interface": {
+    "valid": true,
+    "term": "I | ~[]byte",
+    "diagnostic": []
+  },
+  "qualified_chan": {
+    "valid": true,
+    "term": "time.Duration | ~chan int",
+    "diagnostic": []
+  },
+  "only_function": {
+    "valid": true,
+    "term": "~func(int) int",
+    "diagnostic": []
+  },
+  "only_map": {
+    "valid": true,
+    "term": "~map[string]int",
+    "diagnostic": []
+  },
+  "only_generic": {
+    "valid": true,
+    "term": "Box[int]",
+    "diagnostic": []
+  },
+  "only_parenthesized": {
+    "valid": true,
+    "term": "(Box[int])",
+    "diagnostic": []
+  }
+}

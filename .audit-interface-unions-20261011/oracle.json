@@ -1,0 +1,157 @@
+{
+  "alias_constraint": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "embedded_generic_alias": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "generic_alternatives": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "generic_constraint": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "generic_multiarg": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "generic_then_qualified": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "generic_then_struct": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "homogenous_struct": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "interfaces_linebreaks": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "interfaces_methods": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "interfaces_multiple_clauses": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "interfaces_nested": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "invalid_approx_named": {
+    "go_valid": false,
+    "compiler_error": [
+      "# _/workspace/.audit-interface-unions-20261011/invalid_approx_named",
+      "./target.go:5:19: invalid use of ~ (underlying type of time.Duration is int64)"
+    ]
+  },
+  "invalid_missing_bracket": {
+    "go_valid": false,
+    "compiler_error": [
+      "# _/workspace/.audit-interface-unions-20261011/invalid_missing_bracket",
+      "./target.go:4:41: syntax error: unexpected name bool, expected ]"
+    ]
+  },
+  "invalid_missing_term": {
+    "go_valid": false,
+    "compiler_error": [
+      "# _/workspace/.audit-interface-unions-20261011/invalid_missing_term",
+      "./target.go:4:19: syntax error: unexpected |, expected ~ term or type"
+    ]
+  },
+  "invalid_overlap": {
+    "go_valid": false,
+    "compiler_error": [
+      "# _/workspace/.audit-interface-unions-20261011/invalid_overlap",
+      "./target.go:4:25: overlapping terms ~int and int"
+    ]
+  },
+  "invalid_trailing_pipe": {
+    "go_valid": false,
+    "compiler_error": [
+      "# _/workspace/.audit-interface-unions-20261011/invalid_trailing_pipe",
+      "./target.go:4:29: syntax error: unexpected }, expected ~ term or type"
+    ]
+  },
+  "map_slice": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "mixed_funcs": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "nested_generic_type": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "nonbasic_type": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_array": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_channel": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_function": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_generic": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_map": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_pointer": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "only_slice": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "qualified_mixed": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "qualified_then_generic": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "single_method": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "single_named": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "slice_struct": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "struct_slice": {
+    "go_valid": true,
+    "compiler_error": []
+  },
+  "struct_then_generic": {
+    "go_valid": true,
+    "compiler_error": []
+  }
+}

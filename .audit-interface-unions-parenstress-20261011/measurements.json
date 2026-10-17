@@ -1,0 +1,51 @@
+{
+  "terms008": {
+    "go_valid": true,
+    "seconds": 0.169,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 161
+  },
+  "terms016": {
+    "go_valid": true,
+    "seconds": 0.16,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 305
+  },
+  "terms032": {
+    "go_valid": true,
+    "seconds": 0.163,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 593
+  },
+  "terms064": {
+    "go_valid": true,
+    "seconds": 0.181,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 1169
+  },
+  "terms096": {
+    "go_valid": true,
+    "seconds": 0.179,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 1745
+  },
+  "terms100": {
+    "go_valid": true,
+    "seconds": 0.187,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 1817
+  },
+  "terms101": {
+    "go_valid": false,
+    "seconds": 0.186,
+    "parse_errors": 0,
+    "exit_code": 0,
+    "node_count": 1835
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "homogeneous_008": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "homogeneous_016": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "homogeneous_032": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "homogeneous_064": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "homogeneous_096": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "homogeneous_128": {
+    "go_valid": false,
+    "diagnostic": [
+      "./target.go:2: cannot handle more than 100 union terms (implementation limitation)"
+    ]
+  },
+  "mixed_008": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "mixed_016": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "mixed_032": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "mixed_064": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "mixed_096": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "mixed_128": {
+    "go_valid": false,
+    "diagnostic": [
+      "./target.go:2: cannot handle more than 100 union terms (implementation limitation)"
+    ]
+  },
+  "named_008": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "named_016": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "named_032": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "named_064": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "named_096": {
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "named_128": {
+    "go_valid": false,
+    "diagnostic": [
+      "./target.go:130: cannot handle more than 100 union terms (implementation limitation)"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "terms008": {
+    "count": 8,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms016": {
+    "count": 16,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms032": {
+    "count": 32,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms064": {
+    "count": 64,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms096": {
+    "count": 96,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms100": {
+    "count": 100,
+    "go_valid": true,
+    "diagnostic": []
+  },
+  "terms101": {
+    "count": 101,
+    "go_valid": false,
+    "diagnostic": [
+      "./target.go:2: cannot handle more than 100 union terms (implementation limitation)"
+    ]
+  }
+}

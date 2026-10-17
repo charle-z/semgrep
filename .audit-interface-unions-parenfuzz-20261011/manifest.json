@@ -1,0 +1,2421 @@
+{
+  "case000": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case001": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "(*struct{X int})",
+      "interface{~int}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case002": {
+    "valid": true,
+    "terms": [
+      "~[]byte",
+      "([]string)",
+      "(*struct{X int})",
+      "~(map[string]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case003": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "*(Box[string])",
+      "(Box[int])",
+      "interface{~int}",
+      "(string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case004": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "(Box[int])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case005": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "~(map[string]int)",
+      "~(chan int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case006": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "(Box[int])",
+      "~(struct{X int})",
+      "~func(...int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case007": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "interface{~int}",
+      "~(*string)",
+      "(Box[string])",
+      "(string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case008": {
+    "valid": true,
+    "terms": [
+      "(Box[string])",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case009": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "~(int)",
+      "*(Box[string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case010": {
+    "valid": true,
+    "terms": [
+      "~(int)",
+      "(*struct{X int})",
+      "~struct{F int}",
+      "~(([]byte))"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case011": {
+    "valid": true,
+    "terms": [
+      "(Box[int])",
+      "*(Box[int])",
+      "time.Duration",
+      "(func() int)",
+      "~map[string]bool"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case012": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case013": {
+    "valid": true,
+    "terms": [
+      "~map[string]bool",
+      "(Box[string])",
+      "(Pair[int,string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case014": {
+    "valid": true,
+    "terms": [
+      "~([3]int)",
+      "([]string)",
+      "*(Box[string])",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case015": {
+    "valid": false,
+    "terms": [
+      "(int)",
+      "~(int)",
+      "*(Box[int])",
+      "~(map[string]int)",
+      "~([3]int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:9: overlapping terms ~int and int"
+    ]
+  },
+  "case016": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case017": {
+    "valid": true,
+    "terms": [
+      "~chan<- string",
+      "~(*int)",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case018": {
+    "valid": true,
+    "terms": [
+      "*int",
+      "~func(...int)",
+      "(int)",
+      "(Box[string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case019": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "Box[map[string]int]",
+      "*(Box[int])",
+      "~func(...int)",
+      "(Pair[int,string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case020": {
+    "valid": true,
+    "terms": [
+      "~[]byte",
+      "~(map[string]int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case021": {
+    "valid": true,
+    "terms": [
+      "(func() int)",
+      "~(map[string]int)",
+      "(*struct{X int})"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case022": {
+    "valid": true,
+    "terms": [
+      "*int",
+      "~(chan int)",
+      "~(([]byte))",
+      "(func() int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case023": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])",
+      "~(*int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case024": {
+    "valid": true,
+    "terms": [
+      "interface{~int}",
+      "~(*string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case025": {
+    "valid": true,
+    "terms": [
+      "~(*string)",
+      "(int)",
+      "~(struct{X int})"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case026": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "interface{~int}",
+      "(int)",
+      "interface{~string}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case027": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "*int",
+      "~(([]byte))",
+      "~chan<- string",
+      "time.Duration"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case028": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "~struct{F int}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case029": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)",
+      "~(chan int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case030": {
+    "valid": true,
+    "terms": [
+      "~(*string)",
+      "(int)",
+      "Box[map[string]int]",
+      "*(Box[string])"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case031": {
+    "valid": false,
+    "terms": [
+      "(Pair[int,string])",
+      "~(([]byte))",
+      "interface{~string}",
+      "~([]byte)",
+      "~(chan int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:57: overlapping terms ~[]byte and ~[]byte"
+    ]
+  },
+  "case032": {
+    "valid": true,
+    "terms": [
+      "*(Box[int])",
+      "~([3]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case033": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "~([3]int)",
+      "(Pair[int,string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case034": {
+    "valid": true,
+    "terms": [
+      "interface{~string}",
+      "interface{~int}",
+      "(*struct{X int})",
+      "~(([]byte))"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case035": {
+    "valid": false,
+    "terms": [
+      "~[]byte",
+      "*(Box[string])",
+      "~map[string]bool",
+      "~(int)",
+      "~([]byte)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:104: overlapping terms ~[]byte and ~[]byte"
+    ]
+  },
+  "case036": {
+    "valid": true,
+    "terms": [
+      "interface{~string}",
+      "Box[map[string]int]"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case037": {
+    "valid": true,
+    "terms": [
+      "~(func(int) bool)",
+      "~(int)",
+      "*(Box[string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case038": {
+    "valid": true,
+    "terms": [
+      "~(int)",
+      "(func() int)",
+      "~[]byte",
+      "~(*string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case039": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "~chan<- string",
+      "~func(...int)",
+      "(int)",
+      "~(chan int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case040": {
+    "valid": true,
+    "terms": [
+      "~([3]int)",
+      "(int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case041": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "~(*string)",
+      "~struct{F int}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case042": {
+    "valid": true,
+    "terms": [
+      "time.Duration",
+      "(Pair[int,string])",
+      "~(func(int) bool)",
+      "~([3]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case043": {
+    "valid": true,
+    "terms": [
+      "~(([]byte))",
+      "~map[string]bool",
+      "interface{~string}",
+      "(Box[string])",
+      "interface{~int}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case044": {
+    "valid": true,
+    "terms": [
+      "(int)",
+      "~(func(int) bool)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case045": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "~(*int)",
+      "time.Duration"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case046": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])",
+      "~(*int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case047": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "(*struct{X int})",
+      "~(func(int) bool)",
+      "interface{~int}",
+      "~(struct{X int})"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case048": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "~map[string]bool"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case049": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "*(Box[string])",
+      "~func(...int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case050": {
+    "valid": true,
+    "terms": [
+      "~chan<- string",
+      "~(struct{X int})",
+      "time.Duration",
+      "~struct{F int}"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case051": {
+    "valid": true,
+    "terms": [
+      "interface{~int}",
+      "~([3]int)",
+      "~func(...int)",
+      "interface{~string}",
+      "time.Duration"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case052": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "time.Duration"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case053": {
+    "valid": true,
+    "terms": [
+      "~([3]int)",
+      "(string)",
+      "(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case054": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "~map[string]bool",
+      "(int)",
+      "interface{~int}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case055": {
+    "valid": true,
+    "terms": [
+      "~func(...int)",
+      "~(*string)",
+      "(string)",
+      "(Pair[int,string])",
+      "(Box[int])"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case056": {
+    "valid": true,
+    "terms": [
+      "~chan<- string",
+      "~[]byte"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case057": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~<-chan int",
+      "~(*string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case058": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)",
+      "~(chan int)",
+      "~([]byte)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case059": {
+    "valid": true,
+    "terms": [
+      "~(int)",
+      "~(*string)",
+      "*(Box[int])",
+      "~struct{F int}",
+      "~chan<- string"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case060": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "interface{}"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case061": {
+    "valid": true,
+    "terms": [
+      "*int",
+      "Box[map[string]int]",
+      "~chan<- string"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case062": {
+    "valid": false,
+    "terms": [
+      "(Box[string])",
+      "*int",
+      "~(chan int)",
+      "~(*int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:38: overlapping terms ~*int and *int"
+    ]
+  },
+  "case063": {
+    "valid": true,
+    "terms": [
+      "~(func(int) bool)",
+      "~(struct{X int})",
+      "~(chan int)",
+      "interface{~int}",
+      "(Box[string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case064": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "~(*string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case065": {
+    "valid": true,
+    "terms": [
+      "(Box[int])",
+      "~([3]int)",
+      "(Box[string])"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case066": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(Pair[int,string])",
+      "(Box[int])",
+      "*int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case067": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "*(Box[string])",
+      "~(([]byte))",
+      "time.Duration",
+      "~(map[string]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case068": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case069": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case070": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "*(Box[string])",
+      "(*struct{X int})",
+      "*int"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case071": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "(*struct{X int})",
+      "~(map[string]int)",
+      "interface{~string}",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case072": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "~(([]byte))"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case073": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "~(struct{X int})",
+      "~struct{F int}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case074": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "~map[string]bool",
+      "time.Duration",
+      "~(([]byte))"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case075": {
+    "valid": true,
+    "terms": [
+      "*(Box[int])",
+      "*(Box[string])",
+      "~([]byte)",
+      "~(func(int) bool)",
+      "~(map[string]int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case076": {
+    "valid": true,
+    "terms": [
+      "(int)",
+      "~<-chan int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case077": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "~(int)",
+      "Box[map[string]int]"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case078": {
+    "valid": true,
+    "terms": [
+      "~func(...int)",
+      "~(map[string]int)",
+      "interface{~string}",
+      "*(Box[int])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case079": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "(string)",
+      "interface{~string}",
+      "~func(...int)",
+      "*int"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case080": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "~(chan int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case081": {
+    "valid": true,
+    "terms": [
+      "(Box[string])",
+      "~(struct{X int})",
+      "~(*int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case082": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "(*struct{X int})",
+      "~(func(int) bool)",
+      "(func() int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case083": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "*int",
+      "(Box[int])",
+      "~(struct{X int})",
+      "time.Duration"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case084": {
+    "valid": true,
+    "terms": [
+      "*int",
+      "time.Duration"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case085": {
+    "valid": true,
+    "terms": [
+      "(string)",
+      "(Box[int])",
+      "~([]byte)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case086": {
+    "valid": true,
+    "terms": [
+      "*(Box[int])",
+      "~(*string)",
+      "~(struct{X int})",
+      "(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case087": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)",
+      "~(chan int)",
+      "~([]byte)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case088": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "([]string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case089": {
+    "valid": true,
+    "terms": [
+      "~(chan int)",
+      "(string)",
+      "~[]byte"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case090": {
+    "valid": false,
+    "terms": [
+      "~(*int)",
+      "(func() int)",
+      "*int",
+      "~(chan int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": true,
+    "go_diagnostic": [
+      "./target.go:8:26: overlapping terms *int and ~*int"
+    ]
+  },
+  "case091": {
+    "valid": true,
+    "terms": [
+      "~(([]byte))",
+      "(string)",
+      "interface{~int}",
+      "~(map[string]int)",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case092": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case093": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "~(*string)",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case094": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "~map[string]bool",
+      "(Box[string])",
+      "~([3]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case095": {
+    "valid": true,
+    "terms": [
+      "Box[map[string]int]",
+      "~map[string]bool",
+      "*(Box[string])",
+      "~(chan int)",
+      "~chan<- string"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case096": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "Box[map[string]int]"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case097": {
+    "valid": true,
+    "terms": [
+      "~map[string]bool",
+      "~[]byte",
+      "interface{~string}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case098": {
+    "valid": true,
+    "terms": [
+      "(Box[int])",
+      "(Box[string])",
+      "interface{~string}",
+      "time.Duration"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case099": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "(func() int)",
+      "Box[map[string]int]",
+      "interface{~string}",
+      "~(*string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case100": {
+    "valid": true,
+    "terms": [
+      "(func() int)",
+      "~[]byte"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case101": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "(*struct{X int})",
+      "Box[map[string]int]"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case102": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "~([]byte)",
+      "time.Duration",
+      "~(chan int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case103": {
+    "valid": true,
+    "terms": [
+      "Box[map[string]int]",
+      "*(Box[string])",
+      "~[]byte",
+      "~(*string)",
+      "(Box[string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case104": {
+    "valid": true,
+    "terms": [
+      "(func() int)",
+      "(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case105": {
+    "valid": true,
+    "terms": [
+      "~[]byte",
+      "*(Box[int])",
+      "(string)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case106": {
+    "valid": true,
+    "terms": [
+      "~[]byte",
+      "Box[map[string]int]",
+      "~(func(int) bool)",
+      "interface{~int}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case107": {
+    "valid": true,
+    "terms": [
+      "~([]byte)",
+      "time.Duration",
+      "interface{~string}",
+      "~(*string)",
+      "~(int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case108": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "~struct{F int}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case109": {
+    "valid": true,
+    "terms": [
+      "interface{~string}",
+      "time.Duration",
+      "~[]byte"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case110": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "interface{}",
+      "interface{~int}",
+      "(*struct{X int})"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case111": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "~chan<- string",
+      "(int)",
+      "~(*int)",
+      "~(map[string]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case112": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case113": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "([]string)",
+      "~[]byte"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case114": {
+    "valid": true,
+    "terms": [
+      "~(([]byte))",
+      "(func() int)",
+      "~func(...int)",
+      "*(Box[string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case115": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])",
+      "~(*int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case116": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case117": {
+    "valid": true,
+    "terms": [
+      "*int",
+      "~(map[string]int)",
+      "~(([]byte))"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case118": {
+    "valid": true,
+    "terms": [
+      "(string)",
+      "(Box[string])",
+      "~struct{F int}",
+      "(*struct{X int})"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case119": {
+    "valid": true,
+    "terms": [
+      "(func() int)",
+      "(int)",
+      "~(([]byte))",
+      "~map[string]bool",
+      "~(map[string]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case120": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "(Box[int])"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case121": {
+    "valid": true,
+    "terms": [
+      "~map[string]bool",
+      "~(([]byte))",
+      "(func() int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case122": {
+    "valid": true,
+    "terms": [
+      "interface{~int}",
+      "~(chan int)",
+      "interface{}",
+      "~(*int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case123": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "~func(...int)",
+      "([]string)",
+      "(Pair[int,string])",
+      "~([3]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case124": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "interface{~string}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case125": {
+    "valid": true,
+    "terms": [
+      "interface{~int}",
+      "*(Box[int])",
+      "interface{~string}"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case126": {
+    "valid": true,
+    "terms": [
+      "~map[string]bool",
+      "(Box[string])",
+      "~[]byte",
+      "~(struct{X int})"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case127": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "~(map[string]int)",
+      "interface{~int}",
+      "(Box[string])",
+      "(func() int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case128": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "~(int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case129": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "time.Duration",
+      "*(Box[string])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case130": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "~(struct{X int})",
+      "*int",
+      "~(chan int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case131": {
+    "valid": true,
+    "terms": [
+      "interface{~string}",
+      "~<-chan int",
+      "~map[string]bool",
+      "~(chan int)",
+      "Box[map[string]int]"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case132": {
+    "valid": true,
+    "terms": [
+      "interface{~string}",
+      "Box[map[string]int]"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case133": {
+    "valid": true,
+    "terms": [
+      "(Pair[int,string])",
+      "time.Duration",
+      "~(map[string]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case134": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "~(map[string]int)",
+      "~([3]int)",
+      "~(([]byte))"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case135": {
+    "valid": false,
+    "terms": [
+      "(Pair[int,string])",
+      "(int)",
+      "interface{~int}",
+      "~(int)",
+      "~(*int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": true,
+    "go_diagnostic": [
+      "./target.go:8:48: overlapping terms ~int and int"
+    ]
+  },
+  "case136": {
+    "valid": true,
+    "terms": [
+      "(int)",
+      "*(Box[string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case137": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "~(([]byte))",
+      "~([3]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case138": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])",
+      "~(*int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case139": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "time.Duration",
+      "Box[map[string]int]",
+      "~(map[string]int)",
+      "(int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case140": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "([]string)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case141": {
+    "valid": true,
+    "terms": [
+      "~([3]int)",
+      "*(Box[string])",
+      "~func(...int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case142": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "~(([]byte))",
+      "(Box[int])",
+      "(func() int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case143": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "~<-chan int",
+      "(Pair[int,string])",
+      "~(int)",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case144": {
+    "valid": true,
+    "terms": [
+      "~(int)",
+      "~([3]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case145": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)",
+      "~(chan int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case146": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "(Box[string])",
+      "(int)",
+      "(string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case147": {
+    "valid": true,
+    "terms": [
+      "(string)",
+      "*int",
+      "~([3]int)",
+      "~[]byte",
+      "~(int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case148": {
+    "valid": true,
+    "terms": [
+      "(int)",
+      "~chan<- string"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case149": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "~(int)",
+      "*(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case150": {
+    "valid": true,
+    "terms": [
+      "(int)",
+      "~(func(int) bool)",
+      "([]string)",
+      "(func() int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case151": {
+    "valid": true,
+    "terms": [
+      "~(func(int) bool)",
+      "~[]byte",
+      "~(struct{X int})",
+      "~map[string]bool",
+      "(func() int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case152": {
+    "valid": false,
+    "terms": [
+      "~(*int)",
+      "*int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:11: overlapping terms *int and ~*int"
+    ]
+  },
+  "case153": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~chan<- string",
+      "~func(...int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case154": {
+    "valid": true,
+    "terms": [
+      "*(Box[int])",
+      "~<-chan int",
+      "~func(...int)",
+      "*int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case155": {
+    "valid": true,
+    "terms": [
+      "~chan<- string",
+      "~map[string]bool",
+      "~(*int)",
+      "~func(...int)",
+      "~(func(int) bool)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case156": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "([]string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case157": {
+    "valid": true,
+    "terms": [
+      "(Box[int])",
+      "interface{~int}",
+      "~([]byte)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case158": {
+    "valid": true,
+    "terms": [
+      "*(Box[string])",
+      "~([3]int)",
+      "interface{}",
+      "~(struct{X int})"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case159": {
+    "valid": true,
+    "terms": [
+      "~map[string]bool",
+      "interface{~int}",
+      "*(Box[string])",
+      "(func() int)",
+      "~([]byte)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case160": {
+    "valid": true,
+    "terms": [
+      "time.Duration",
+      "(func() int)"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case161": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)",
+      "(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case162": {
+    "valid": true,
+    "terms": [
+      "~(*int)",
+      "(int)",
+      "~(*string)",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case163": {
+    "valid": true,
+    "terms": [
+      "(Box[int])",
+      "(Pair[int,string])",
+      "~chan<- string",
+      "~(*int)",
+      "*(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case164": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "(string)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case165": {
+    "valid": true,
+    "terms": [
+      "~(*string)",
+      "~struct{F int}",
+      "(*struct{X int})"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case166": {
+    "valid": false,
+    "terms": [
+      "~([]byte)",
+      "~[]byte",
+      "~(struct{X int})",
+      "~(map[string]int)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:13: overlapping terms ~[]byte and ~[]byte"
+    ]
+  },
+  "case167": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "*int",
+      "interface{~int}",
+      "~map[string]bool",
+      "~(*string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case168": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "(Box[string])"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case169": {
+    "valid": true,
+    "terms": [
+      "~(func(int) bool)",
+      "(Box[int])",
+      "interface{}"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case170": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "*(Box[int])",
+      "~(chan int)",
+      "(Pair[int,string])"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case171": {
+    "valid": true,
+    "terms": [
+      "~struct{F int}",
+      "~([]byte)",
+      "~(struct{X int})",
+      "~map[string]bool",
+      "~(*string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case172": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "~([]byte)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case173": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "Box[map[string]int]",
+      "(int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case174": {
+    "valid": true,
+    "terms": [
+      "~(struct{X int})",
+      "(int)",
+      "~(chan int)",
+      "~([]byte)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case175": {
+    "valid": true,
+    "terms": [
+      "~chan<- string",
+      "(*struct{X int})",
+      "~(map[string]int)",
+      "~(*int)",
+      "([]string)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case176": {
+    "valid": true,
+    "terms": [
+      "Box[map[string]int]",
+      "interface{~string}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case177": {
+    "valid": false,
+    "terms": [
+      "~(*int)",
+      "*int",
+      "([]string)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:11: overlapping terms *int and ~*int"
+    ]
+  },
+  "case178": {
+    "valid": true,
+    "terms": [
+      "(Box[string])",
+      "~(*string)",
+      "(Pair[int,string])",
+      "~struct{F int}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case179": {
+    "valid": false,
+    "terms": [
+      "~(map[string]int)",
+      "*int",
+      "([]string)",
+      "~(*int)",
+      "(Box[int])"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:6:41: overlapping terms ~*int and *int"
+    ]
+  },
+  "case180": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "~<-chan int"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case181": {
+    "valid": true,
+    "terms": [
+      "~(int)",
+      "~([]byte)",
+      "~(struct{X int})"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case182": {
+    "valid": true,
+    "terms": [
+      "([]string)",
+      "~(func(int) bool)",
+      "~struct{F int}",
+      "*int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case183": {
+    "valid": false,
+    "terms": [
+      "(func() int)",
+      "(Box[string])",
+      "time.Duration",
+      "~[]byte",
+      "~(([]byte))"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": [
+      "./target.go:7:58: overlapping terms ~[]byte and ~[]byte"
+    ]
+  },
+  "case184": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "~([]byte)"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case185": {
+    "valid": true,
+    "terms": [
+      "time.Duration",
+      "~(*int)",
+      "~func(...int)"
+    ],
+    "range": false,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case186": {
+    "valid": true,
+    "terms": [
+      "~(map[string]int)",
+      "(func() int)",
+      "~map[string]bool",
+      "interface{}"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case187": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "(Box[string])",
+      "~(map[string]int)",
+      "~(*string)",
+      "~[]byte"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case188": {
+    "valid": true,
+    "terms": [
+      "(*struct{X int})",
+      "*int"
+    ],
+    "range": true,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case189": {
+    "valid": true,
+    "terms": [
+      "Box[map[string]int]",
+      "(Box[int])",
+      "(int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": true,
+    "go_diagnostic": []
+  },
+  "case190": {
+    "valid": true,
+    "terms": [
+      "~<-chan int",
+      "~(map[string]int)",
+      "*int",
+      "Box[map[string]int]"
+    ],
+    "range": true,
+    "method": true,
+    "embedded": false,
+    "go_diagnostic": []
+  },
+  "case191": {
+    "valid": true,
+    "terms": [
+      "interface{}",
+      "time.Duration",
+      "~(map[string]int)",
+      "~map[string]bool",
+      "~([3]int)"
+    ],
+    "range": false,
+    "method": false,
+    "embedded": false,
+    "go_diagnostic": []
+  }
+}

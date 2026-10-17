@@ -1,0 +1,14 @@
+rules:
+- id: parenfuzz-range
+  languages: [go]
+  message: Go for-range must be detected after complex interface type sets
+  severity: INFO
+  pattern: |
+    for range $XS {
+      ...
+    }
+- id: parenfuzz-sink
+  languages: [go]
+  message: Sentinel call must remain visible
+  severity: INFO
+  pattern: auditSink($X)

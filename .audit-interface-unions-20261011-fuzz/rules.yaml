@@ -1,0 +1,14 @@
+rules:
+- id: iface-fuzz-range
+  languages: [go]
+  message: range loop must be visible through composite type sets
+  severity: INFO
+  pattern: |
+    for range $XS {
+      ...
+    }
+- id: iface-fuzz-sink
+  languages: [go]
+  message: call after interface constraints must remain visible
+  severity: INFO
+  pattern: auditSink($X)

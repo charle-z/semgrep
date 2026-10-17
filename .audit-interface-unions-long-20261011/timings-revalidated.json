@@ -1,0 +1,146 @@
+{
+  "homogeneous_008": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.18,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "homogeneous_016": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.176,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "homogeneous_032": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.193,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "homogeneous_064": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.182,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "homogeneous_096": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.192,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "homogeneous_128": {
+    "go_valid": false,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.169,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_008": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.176,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_016": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.16,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_032": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.179,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_064": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.169,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_096": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.186,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "mixed_128": {
+    "go_valid": false,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.182,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_008": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.179,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_016": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.174,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_032": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.188,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_064": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.17,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_096": {
+    "go_valid": true,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.182,
+    "parse_errors": 0,
+    "line_errors": 0
+  },
+  "named_128": {
+    "go_valid": false,
+    "partial": false,
+    "code": 0,
+    "seconds": 0.186,
+    "parse_errors": 0,
+    "line_errors": 0
+  }
+}

@@ -1,0 +1,3074 @@
+{
+  "expected": {
+    "targets": 257,
+    "scanner_findings": 384,
+    "range_findings": 128,
+    "sink_findings": 256
+  },
+  "cases": [
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case000.go",
+      "range": true,
+      "union": [
+        "*int"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case001.go",
+      "range": false,
+      "union": [
+        "~*string",
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case002.go",
+      "range": true,
+      "union": [
+        "int",
+        "**struct{ A int }",
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case003.go",
+      "range": false,
+      "union": [
+        "~*string",
+        "~func() int",
+        "~map[int]int",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case004.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "~func() int",
+        "~chan int",
+        "~func(string) bool",
+        "~map[string]bool"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case005.go",
+      "range": false,
+      "union": [
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case006.go",
+      "range": true,
+      "union": [
+        "~[]string",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case007.go",
+      "range": false,
+      "union": [
+        "~chan int",
+        "string",
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case008.go",
+      "range": true,
+      "union": [
+        "Pair[int,string]",
+        "~chan int",
+        "**struct{ A int }",
+        "~[]string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case009.go",
+      "range": false,
+      "union": [
+        "~[2]int",
+        "Box[int]",
+        "int",
+        "~func() int",
+        "Pair[int,string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case010.go",
+      "range": true,
+      "union": [
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case011.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case012.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "Box[string]",
+        "string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case013.go",
+      "range": false,
+      "union": [
+        "~[]byte",
+        "~struct{ A int }",
+        "~func(string) bool",
+        "string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case014.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "~[2]int",
+        "**struct{ A int }",
+        "Pair[Box[int],Box[string]]",
+        "*int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case015.go",
+      "range": false,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case016.go",
+      "range": true,
+      "union": [
+        "~struct{ B string }",
+        "~[]byte"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case017.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case018.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "~struct{ A int }",
+        "**struct{ A int }",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case019.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case020.go",
+      "range": true,
+      "union": [
+        "~[]string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case021.go",
+      "range": false,
+      "union": [
+        "~[2]int",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case022.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "Pair[int,string]",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case023.go",
+      "range": false,
+      "union": [
+        "~func() int",
+        "~*string",
+        "~[]string",
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case024.go",
+      "range": true,
+      "union": [
+        "~func(string) bool",
+        "time.Duration",
+        "~struct{ A int }",
+        "string",
+        "Box[int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case025.go",
+      "range": false,
+      "union": [
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case026.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case027.go",
+      "range": false,
+      "union": [
+        "time.Duration",
+        "~chan string",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case028.go",
+      "range": true,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~func(string) bool",
+        "~func() int",
+        "~[]string"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case029.go",
+      "range": false,
+      "union": [
+        "~struct{ B string }",
+        "string",
+        "~[]byte",
+        "~map[int]int",
+        "~chan string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case030.go",
+      "range": true,
+      "union": [
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case031.go",
+      "range": false,
+      "union": [
+        "~struct{ B string }",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case032.go",
+      "range": true,
+      "union": [
+        "~struct{ B string }",
+        "**struct{ A int }",
+        "~chan string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case033.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]",
+        "Pair[Box[int],Box[string]]",
+        "string",
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case034.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case035.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case036.go",
+      "range": true,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~*string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case037.go",
+      "range": false,
+      "union": [
+        "*int",
+        "Pair[Box[int],Box[string]]",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case038.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case039.go",
+      "range": false,
+      "union": [
+        "~func() int",
+        "~[3]string",
+        "~struct{ A int }",
+        "~func(string) bool",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case040.go",
+      "range": true,
+      "union": [
+        "~[3]string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case041.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]",
+        "~struct{ B string }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case042.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "Pair[Box[int],Box[string]]",
+        "~map[int]int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case043.go",
+      "range": false,
+      "union": [
+        "Box[string]",
+        "~complex64",
+        "~map[int]int",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case044.go",
+      "range": true,
+      "union": [
+        "~map[int]int",
+        "int",
+        "Box[int]",
+        "~struct{ A int }",
+        "~func(string) bool"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case045.go",
+      "range": false,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case046.go",
+      "range": true,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case047.go",
+      "range": false,
+      "union": [
+        "~[]string",
+        "Pair[string,int]",
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case048.go",
+      "range": true,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~*string",
+        "~[]string",
+        "~[3]string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case049.go",
+      "range": false,
+      "union": [
+        "int",
+        "~[3]string",
+        "~complex64",
+        "Pair[int,string]",
+        "*int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case050.go",
+      "range": true,
+      "union": [
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case051.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case052.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "~struct{ A int }",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case053.go",
+      "range": false,
+      "union": [
+        "*int",
+        "Pair[int,string]",
+        "~[3]string",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case054.go",
+      "range": true,
+      "union": [
+        "int",
+        "Pair[int,string]",
+        "~[]byte",
+        "~*string",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case055.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case056.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "Box[string]"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case057.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case058.go",
+      "range": true,
+      "union": [
+        "Box[int]",
+        "~struct{ A int }",
+        "~[3]string",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case059.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~map[string]bool",
+        "~[3]string",
+        "Pair[string,int]",
+        "~struct{ B string }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case060.go",
+      "range": true,
+      "union": [
+        "Box[int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case061.go",
+      "range": false,
+      "union": [
+        "~func() int",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case062.go",
+      "range": true,
+      "union": [
+        "~*string",
+        "~func(string) bool",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case063.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]",
+        "~map[int]int",
+        "string",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case064.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~complex64",
+        "~*string",
+        "string",
+        "int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case065.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case066.go",
+      "range": true,
+      "union": [
+        "Box[int]",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case067.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "string",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case068.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case069.go",
+      "range": false,
+      "union": [
+        "~func() int",
+        "~[]string",
+        "int",
+        "~struct{ B string }",
+        "Pair[int,string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case070.go",
+      "range": true,
+      "union": [
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case071.go",
+      "range": false,
+      "union": [
+        "~struct{ B string }",
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case072.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~func() int",
+        "Box[int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case073.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "~chan string",
+        "~map[int]int",
+        "~*string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case074.go",
+      "range": true,
+      "union": [
+        "string",
+        "int",
+        "Box[string]",
+        "~chan string",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case075.go",
+      "range": false,
+      "union": [
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case076.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~*string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case077.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "~*string",
+        "*int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case078.go",
+      "range": true,
+      "union": [
+        "**struct{ A int }",
+        "~func(string) bool",
+        "time.Duration",
+        "~struct{ B string }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case079.go",
+      "range": false,
+      "union": [
+        "~[2]int",
+        "Box[string]",
+        "~struct{ B string }",
+        "~*string",
+        "int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case080.go",
+      "range": true,
+      "union": [
+        "~complex64"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case081.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }",
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case082.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "~[]byte",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case083.go",
+      "range": false,
+      "union": [
+        "time.Duration",
+        "**struct{ A int }",
+        "~[3]string",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case084.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "string",
+        "~map[string]bool",
+        "~struct{ A int }",
+        "~[]byte"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case085.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case086.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "Pair[int,string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case087.go",
+      "range": false,
+      "union": [
+        "string",
+        "*int",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case088.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "string",
+        "~complex64",
+        "~map[int]int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case089.go",
+      "range": false,
+      "union": [
+        "string",
+        "~chan int",
+        "time.Duration",
+        "~chan string",
+        "Pair[int,string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case090.go",
+      "range": true,
+      "union": [
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case091.go",
+      "range": false,
+      "union": [
+        "~chan string",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case092.go",
+      "range": true,
+      "union": [
+        "Box[string]",
+        "~chan int",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case093.go",
+      "range": false,
+      "union": [
+        "time.Duration",
+        "~map[int]int",
+        "string",
+        "~struct{ B string }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case094.go",
+      "range": true,
+      "union": [
+        "~*string",
+        "~[3]string",
+        "Pair[Box[int],Box[string]]",
+        "~chan string",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case095.go",
+      "range": false,
+      "union": [
+        "*int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case096.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case097.go",
+      "range": false,
+      "union": [
+        "Box[string]",
+        "~[]byte",
+        "int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case098.go",
+      "range": true,
+      "union": [
+        "~func(string) bool",
+        "~func() int",
+        "~*string",
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case099.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "string",
+        "Pair[string,int]",
+        "~[]string",
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case100.go",
+      "range": true,
+      "union": [
+        "~[2]int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case101.go",
+      "range": false,
+      "union": [
+        "time.Duration",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case102.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case103.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "Pair[string,int]",
+        "~chan string",
+        "~*string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case104.go",
+      "range": true,
+      "union": [
+        "~[]byte",
+        "~func(string) bool",
+        "Pair[Box[int],Box[string]]",
+        "**struct{ A int }",
+        "*int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case105.go",
+      "range": false,
+      "union": [
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case106.go",
+      "range": true,
+      "union": [
+        "~chan int",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case107.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }",
+        "time.Duration",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case108.go",
+      "range": true,
+      "union": [
+        "~[]byte",
+        "~func(string) bool",
+        "~map[string]bool",
+        "~*string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case109.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "~[]byte",
+        "~func(string) bool",
+        "Box[int]",
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case110.go",
+      "range": true,
+      "union": [
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case111.go",
+      "range": false,
+      "union": [
+        "~chan int",
+        "~*string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case112.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "~func(string) bool",
+        "~map[int]int"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case113.go",
+      "range": false,
+      "union": [
+        "int",
+        "~[]string",
+        "~struct{ A int }",
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case114.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case115.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case116.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case117.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case118.go",
+      "range": true,
+      "union": [
+        "~[]string",
+        "Pair[string,int]",
+        "Box[int]",
+        "string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case119.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case120.go",
+      "range": true,
+      "union": [
+        "~struct{ B string }"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case121.go",
+      "range": false,
+      "union": [
+        "Box[string]",
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case122.go",
+      "range": true,
+      "union": [
+        "string",
+        "Box[int]",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case123.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "*int",
+        "time.Duration",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case124.go",
+      "range": true,
+      "union": [
+        "Box[int]",
+        "~struct{ B string }",
+        "**struct{ A int }",
+        "Pair[Box[int],Box[string]]",
+        "~map[string]bool"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case125.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case126.go",
+      "range": true,
+      "union": [
+        "~map[int]int",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case127.go",
+      "range": false,
+      "union": [
+        "string",
+        "~*string",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case128.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "Pair[Box[int],Box[string]]",
+        "~chan string",
+        "Box[int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case129.go",
+      "range": false,
+      "union": [
+        "~[]byte",
+        "Box[int]",
+        "~func() int",
+        "~*string",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case130.go",
+      "range": true,
+      "union": [
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case131.go",
+      "range": false,
+      "union": [
+        "~chan string",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case132.go",
+      "range": true,
+      "union": [
+        "~map[string]bool",
+        "Box[string]",
+        "~complex64"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case133.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case134.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~chan int",
+        "~[3]string",
+        "Pair[string,int]",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case135.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case136.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case137.go",
+      "range": false,
+      "union": [
+        "~[3]string",
+        "~[2]int",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case138.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "Box[string]",
+        "~*string",
+        "int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case139.go",
+      "range": false,
+      "union": [
+        "int",
+        "*int",
+        "~map[int]int",
+        "~[]byte",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case140.go",
+      "range": true,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case141.go",
+      "range": false,
+      "union": [
+        "~[2]int",
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case142.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "*int",
+        "int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case143.go",
+      "range": false,
+      "union": [
+        "~[]byte",
+        "~map[string]bool",
+        "time.Duration",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case144.go",
+      "range": true,
+      "union": [
+        "~func(string) bool",
+        "**struct{ A int }",
+        "~chan int",
+        "~map[string]bool",
+        "~map[int]int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case145.go",
+      "range": false,
+      "union": [
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case146.go",
+      "range": true,
+      "union": [
+        "~func() int",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case147.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "Pair[string,int]",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case148.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~func() int",
+        "~*string",
+        "~map[string]bool"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case149.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~chan int",
+        "~[]string",
+        "*int",
+        "~map[int]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case150.go",
+      "range": true,
+      "union": [
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case151.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case152.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case153.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case154.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "int",
+        "~complex64",
+        "~[3]string",
+        "~struct{ B string }"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case155.go",
+      "range": false,
+      "union": [
+        "string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case156.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "~chan int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case157.go",
+      "range": false,
+      "union": [
+        "Box[string]",
+        "string",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case158.go",
+      "range": true,
+      "union": [
+        "string",
+        "~[2]int",
+        "~chan int",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case159.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "~[3]string",
+        "string",
+        "Box[int]",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case160.go",
+      "range": true,
+      "union": [
+        "~*string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case161.go",
+      "range": false,
+      "union": [
+        "~[]byte",
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case162.go",
+      "range": true,
+      "union": [
+        "~[]string",
+        "~func(string) bool",
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case163.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }",
+        "~chan int",
+        "~struct{ A int }",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case164.go",
+      "range": true,
+      "union": [
+        "~struct{ B string }",
+        "**struct{ A int }",
+        "~struct{ A int }",
+        "~complex64",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case165.go",
+      "range": false,
+      "union": [
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case166.go",
+      "range": true,
+      "union": [
+        "~[]byte",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case167.go",
+      "range": false,
+      "union": [
+        "Box[string]",
+        "~[]string",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case168.go",
+      "range": true,
+      "union": [
+        "Pair[int,string]",
+        "~[]string",
+        "string",
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case169.go",
+      "range": false,
+      "union": [
+        "~chan string",
+        "~func(string) bool",
+        "~struct{ A int }",
+        "~[]byte",
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case170.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case171.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case172.go",
+      "range": true,
+      "union": [
+        "~[]string",
+        "~struct{ A int }",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case173.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]",
+        "**struct{ A int }",
+        "~complex64",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case174.go",
+      "range": true,
+      "union": [
+        "~map[int]int",
+        "int",
+        "~struct{ A int }",
+        "~struct{ B string }",
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case175.go",
+      "range": false,
+      "union": [
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case176.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "~chan string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case177.go",
+      "range": false,
+      "union": [
+        "string",
+        "~struct{ A int }",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case178.go",
+      "range": true,
+      "union": [
+        "~chan string",
+        "int",
+        "~map[int]int",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case179.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }",
+        "~map[int]int",
+        "~struct{ A int }",
+        "int",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case180.go",
+      "range": true,
+      "union": [
+        "~[]byte"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case181.go",
+      "range": false,
+      "union": [
+        "~chan int",
+        "Pair[string,int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case182.go",
+      "range": true,
+      "union": [
+        "int",
+        "Box[int]",
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case183.go",
+      "range": false,
+      "union": [
+        "~map[string]bool",
+        "~func(string) bool",
+        "Pair[int,string]",
+        "~chan string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case184.go",
+      "range": true,
+      "union": [
+        "**struct{ A int }",
+        "~map[string]bool",
+        "int",
+        "~*string",
+        "*int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case185.go",
+      "range": false,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case186.go",
+      "range": true,
+      "union": [
+        "Pair[string,int]",
+        "int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case187.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case188.go",
+      "range": true,
+      "union": [
+        "~complex64",
+        "int",
+        "~func(string) bool",
+        "~[]byte"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case189.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "~*string",
+        "time.Duration",
+        "~[3]string",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case190.go",
+      "range": true,
+      "union": [
+        "*int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case191.go",
+      "range": false,
+      "union": [
+        "~[3]string",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case192.go",
+      "range": true,
+      "union": [
+        "Pair[string,int]",
+        "~[3]string",
+        "time.Duration"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case193.go",
+      "range": false,
+      "union": [
+        "~[]string",
+        "time.Duration",
+        "~[3]string",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case194.go",
+      "range": true,
+      "union": [
+        "~func() int",
+        "~complex64",
+        "~struct{ B string }",
+        "~[]byte",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case195.go",
+      "range": false,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case196.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "~*string"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case197.go",
+      "range": false,
+      "union": [
+        "~chan string",
+        "*int",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case198.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "~*string",
+        "~complex64",
+        "Pair[int,string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case199.go",
+      "range": false,
+      "union": [
+        "Box[int]",
+        "**struct{ A int }",
+        "Pair[string,int]",
+        "~struct{ A int }",
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case200.go",
+      "range": true,
+      "union": [
+        "int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case201.go",
+      "range": false,
+      "union": [
+        "string",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case202.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "~chan int",
+        "*int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case203.go",
+      "range": false,
+      "union": [
+        "~struct{ B string }",
+        "~map[string]bool",
+        "string",
+        "~chan string"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case204.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case205.go",
+      "range": false,
+      "union": [
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case206.go",
+      "range": true,
+      "union": [
+        "int",
+        "*int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case207.go",
+      "range": false,
+      "union": [
+        "~[]string",
+        "~struct{ B string }",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case208.go",
+      "range": true,
+      "union": [
+        "~[]byte",
+        "Box[int]",
+        "~struct{ A int }",
+        "~struct{ B string }"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case209.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case210.go",
+      "range": true,
+      "union": [
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case211.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case212.go",
+      "range": true,
+      "union": [
+        "~func() int",
+        "~[]string",
+        "Pair[int,string]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case213.go",
+      "range": false,
+      "union": [
+        "~[2]int",
+        "Pair[string,int]",
+        "Pair[int,string]",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case214.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "~[2]int",
+        "~func(string) bool",
+        "Pair[string,int]",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case215.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case216.go",
+      "range": true,
+      "union": [
+        "~map[int]int",
+        "Pair[string,int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case217.go",
+      "range": false,
+      "union": [
+        "**struct{ A int }",
+        "Pair[int,string]",
+        "string"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case218.go",
+      "range": true,
+      "union": [
+        "~map[string]bool",
+        "Pair[string,int]",
+        "*int",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case219.go",
+      "range": false,
+      "union": [
+        "Pair[int,string]",
+        "**struct{ A int }",
+        "int",
+        "~chan string",
+        "Box[int]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case220.go",
+      "range": true,
+      "union": [
+        "~*string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case221.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case222.go",
+      "range": true,
+      "union": [
+        "~func() int",
+        "Box[string]",
+        "~[2]int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case223.go",
+      "range": false,
+      "union": [
+        "~*string",
+        "~struct{ A int }",
+        "~func() int",
+        "~complex64"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case224.go",
+      "range": true,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~map[string]bool",
+        "*int",
+        "string",
+        "~[]string"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case225.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case226.go",
+      "range": true,
+      "union": [
+        "~[2]int",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case227.go",
+      "range": false,
+      "union": [
+        "int",
+        "~func(string) bool",
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case228.go",
+      "range": true,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool",
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case229.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "~map[string]bool",
+        "~struct{ A int }",
+        "Box[string]",
+        "*int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case230.go",
+      "range": true,
+      "union": [
+        "~[3]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case231.go",
+      "range": false,
+      "union": [
+        "~struct{ B string }",
+        "**struct{ A int }"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case232.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "~*string",
+        "string"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case233.go",
+      "range": false,
+      "union": [
+        "Pair[int,string]",
+        "~[3]string",
+        "~struct{ B string }",
+        "~[]string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case234.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~chan string",
+        "~map[string]bool",
+        "Pair[string,int]",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case235.go",
+      "range": false,
+      "union": [
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case236.go",
+      "range": true,
+      "union": [
+        "**struct{ A int }",
+        "Pair[string,int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case237.go",
+      "range": false,
+      "union": [
+        "~[]byte",
+        "~[2]int",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case238.go",
+      "range": true,
+      "union": [
+        "~struct{ A int }",
+        "~[]byte",
+        "Box[int]",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case239.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "~struct{ A int }",
+        "~[]byte",
+        "~func(string) bool",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case240.go",
+      "range": true,
+      "union": [
+        "~func() int"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case241.go",
+      "range": false,
+      "union": [
+        "~[]string",
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case242.go",
+      "range": true,
+      "union": [
+        "Pair[int,string]",
+        "~map[int]int",
+        "~func(string) bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case243.go",
+      "range": false,
+      "union": [
+        "~func(string) bool",
+        "*int",
+        "~struct{ B string }",
+        "time.Duration"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case244.go",
+      "range": true,
+      "union": [
+        "~func(string) bool",
+        "~func() int",
+        "~struct{ A int }",
+        "~chan string",
+        "Pair[int,string]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case245.go",
+      "range": false,
+      "union": [
+        "~map[int]int"
+      ],
+      "method": false,
+      "embedded": true,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case246.go",
+      "range": true,
+      "union": [
+        "time.Duration",
+        "~func() int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case247.go",
+      "range": false,
+      "union": [
+        "*int",
+        "~*string",
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case248.go",
+      "range": true,
+      "union": [
+        "Box[int]",
+        "~struct{ A int }",
+        "**struct{ A int }",
+        "Pair[string,int]"
+      ],
+      "method": true,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case249.go",
+      "range": false,
+      "union": [
+        "Pair[Box[int],Box[string]]",
+        "~chan int",
+        "**struct{ A int }",
+        "~[]string",
+        "string"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case250.go",
+      "range": true,
+      "union": [
+        "~map[string]bool"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case251.go",
+      "range": false,
+      "union": [
+        "string",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case252.go",
+      "range": true,
+      "union": [
+        "~struct{ B string }",
+        "Pair[Box[int],Box[string]]",
+        "~[3]string"
+      ],
+      "method": true,
+      "embedded": true,
+      "alias": true
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case253.go",
+      "range": false,
+      "union": [
+        "~complex64",
+        "~chan string",
+        "Pair[Box[int],Box[string]]",
+        "Box[string]"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case254.go",
+      "range": true,
+      "union": [
+        "~func(string) bool",
+        "time.Duration",
+        "~complex64",
+        "Pair[string,int]",
+        "~chan int"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": false
+    },
+    {
+      "file": ".audit-interface-unions-20261011-fuzz/case255.go",
+      "range": false,
+      "union": [
+        "~struct{ A int }"
+      ],
+      "method": false,
+      "embedded": false,
+      "alias": true
+    }
+  ]
+}

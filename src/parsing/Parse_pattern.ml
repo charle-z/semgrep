@@ -94,8 +94,15 @@ let parse_pattern_by_lang options lang str =
       any
   (* Use menhir and tree-sitter *)
   | Lang.Go ->
-      let any = Parse_go.any_of_string str in
-      Go_to_generic.any any
+      str
+      |> run_pattern
+           [
+             PfffPat (fun s -> Go_to_generic.any (Parse_go.any_of_string s));
+             TreeSitterPat
+               (fun s ->
+                 let res = Parse_go_tree_sitter.parse_pattern s in
+                 { res with program = Option.map Go_to_generic.any res.program });
+           ]
   | Lang.Php ->
       let any_cst = Parse_php.any_of_string str in
       let any = Ast_php_build.any any_cst in

@@ -1,0 +1,119 @@
+{
+  "homogeneous_008": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.186,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "homogeneous_016": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.182,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "homogeneous_032": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.182,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "homogeneous_064": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.181,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "homogeneous_096": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.189,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "homogeneous_128": {
+    "valid_go": false,
+    "reason": "Go 1.26 rejects >100 terms"
+  },
+  "mixed_008": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.176,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "mixed_016": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.173,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "mixed_032": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.195,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "mixed_064": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.17,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "mixed_096": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.2,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "mixed_128": {
+    "valid_go": false,
+    "reason": "Go 1.26 rejects >100 terms"
+  },
+  "named_008": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.188,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "named_016": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.183,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "named_032": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.177,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "named_064": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.175,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "named_096": {
+    "valid_go": true,
+    "exit_code": 0,
+    "seconds": 0.177,
+    "parse_errors": 0,
+    "partial": false
+  },
+  "named_128": {
+    "valid_go": false,
+    "reason": "Go 1.26 rejects >100 terms"
+  }
+}
