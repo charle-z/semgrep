@@ -58,3 +58,4 @@ type C interface { ~map[string bool }
         (ERROR
           (identifier)
           (identifier))))))
+

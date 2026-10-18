@@ -1161,9 +1161,6 @@ and map_interface_nonstruct_type_term (env : env) (x : CST.interface_nonstruct_t
         | `Poin_type x -> R.Case ("Poin_type",
             map_pointer_type env x
           )
-        | `Paren_type x -> R.Case ("Paren_type",
-            map_parenthesized_type env x
-          )
         )
       in
       R.Tuple [v1; v2]
@@ -1173,55 +1170,7 @@ and map_interface_nonstruct_type_term (env : env) (x : CST.interface_nonstruct_t
       let v2 = map_pointer_type env v2 in
       R.Tuple [v1; v2]
     )
-  | `Opt_TILDE_choice_paren_type (v1, v2) -> R.Case ("Opt_TILDE_choice_paren_type",
-      let v1 =
-        (match v1 with
-        | Some tok -> R.Option (Some (
-            (* "~" *) token env tok
-          ))
-        | None -> R.Option None)
-      in
-      let v2 =
-        (match v2 with
-        | `Paren_type x -> R.Case ("Paren_type",
-            map_parenthesized_type env x
-          )
-        | `Inte_type x -> R.Case ("Inte_type",
-            map_interface_type env x
-          )
-        )
-      in
-      R.Tuple [v1; v2]
-    )
   )
-
-and map_interface_type (env : env) ((v1, v2, v3, v4) : CST.interface_type) =
-  let v1 = (* "interface" *) token env v1 in
-  let v2 = (* "{" *) token env v2 in
-  let v3 =
-    (match v3 with
-    | Some (v1, v2, v3) -> R.Option (Some (
-        let v1 = map_interface_body env v1 in
-        let v2 =
-          R.List (List.map (fun (v1, v2) ->
-            let v1 = map_anon_choice_LF_249c99f env v1 in
-            let v2 = map_interface_body env v2 in
-            R.Tuple [v1; v2]
-          ) v2)
-        in
-        let v3 =
-          (match v3 with
-          | Some x -> R.Option (Some (
-              map_anon_choice_LF_249c99f env x
-            ))
-          | None -> R.Option None)
-        in
-        R.Tuple [v1; v2; v3]
-      ))
-    | None -> R.Option None)
-  in
-  let v4 = (* "}" *) token env v4 in
-  R.Tuple [v1; v2; v3; v4]
 
 and map_literal_element (env : env) (x : CST.literal_element) =
   (match x with
@@ -1306,12 +1255,6 @@ and map_parameter_list (env : env) ((v1, v2, v3) : CST.parameter_list) =
       ))
     | None -> R.Option None)
   in
-  let v3 = (* ")" *) token env v3 in
-  R.Tuple [v1; v2; v3]
-
-and map_parenthesized_type (env : env) ((v1, v2, v3) : CST.parenthesized_type) =
-  let v1 = (* "(" *) token env v1 in
-  let v2 = map_type_ env v2 in
   let v3 = (* ")" *) token env v3 in
   R.Tuple [v1; v2; v3]
 
@@ -1441,8 +1384,33 @@ and map_simple_type (env : env) (x : CST.simple_type) =
   | `Struct_type x -> R.Case ("Struct_type",
       map_struct_type env x
     )
-  | `Inte_type x -> R.Case ("Inte_type",
-      map_interface_type env x
+  | `Inte_type (v1, v2, v3, v4) -> R.Case ("Inte_type",
+      let v1 = (* "interface" *) token env v1 in
+      let v2 = (* "{" *) token env v2 in
+      let v3 =
+        (match v3 with
+        | Some (v1, v2, v3) -> R.Option (Some (
+            let v1 = map_interface_body env v1 in
+            let v2 =
+              R.List (List.map (fun (v1, v2) ->
+                let v1 = map_anon_choice_LF_249c99f env v1 in
+                let v2 = map_interface_body env v2 in
+                R.Tuple [v1; v2]
+              ) v2)
+            in
+            let v3 =
+              (match v3 with
+              | Some x -> R.Option (Some (
+                  map_anon_choice_LF_249c99f env x
+                ))
+              | None -> R.Option None)
+            in
+            R.Tuple [v1; v2; v3]
+          ))
+        | None -> R.Option None)
+      in
+      let v4 = (* "}" *) token env v4 in
+      R.Tuple [v1; v2; v3; v4]
     )
   | `Array_type x -> R.Case ("Array_type",
       map_array_type env x
@@ -1717,8 +1685,11 @@ and map_type_ (env : env) (x : CST.type_) =
   | `Simple_type x -> R.Case ("Simple_type",
       map_simple_type env x
     )
-  | `Paren_type x -> R.Case ("Paren_type",
-      map_parenthesized_type env x
+  | `Paren_type (v1, v2, v3) -> R.Case ("Paren_type",
+      let v1 = (* "(" *) token env v1 in
+      let v2 = map_type_ env v2 in
+      let v3 = (* ")" *) token env v3 in
+      R.Tuple [v1; v2; v3]
     )
   )
 

@@ -122,8 +122,6 @@ module.exports = grammar(base_grammar, {
       $.generic_type,
       $.interface_nonstruct_pointer,
       seq('~', $.pointer_type),
-      // Go permits parenthesized type terms and interfaces used as terms.
-      seq(optional('~'), choice($.parenthesized_type, $.interface_type)),
     ),
 
     // Keep *struct{...} in the legacy struct_term branch. Otherwise
@@ -134,7 +132,6 @@ module.exports = grammar(base_grammar, {
         $._type_identifier, $.qualified_type, $.generic_type,
         $.slice_type, $.map_type, $.array_type,
         $.channel_type, $.function_type, $.pointer_type,
-        $.parenthesized_type,
       ),
     ),
 

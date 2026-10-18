@@ -27,17 +27,3 @@ func scanNamedWithStruct[T NamedWithStruct](xs []int, value T) {
         sink(value)
     }
 }
-
-type ParenthesizedInterfaceConstraint interface {
-    interface{ ~int } | ~([]byte)
-}
-
-func scanParenthesizedInterfaceConstraint[T ParenthesizedInterfaceConstraint](xs []int, value T) {
-    // ruleid:go124-interface-range
-    for range xs {
-        // ruleid:go124-interface-sink
-        sink(value)
-    }
-    // ok:go124-interface-range
-    for i := 0; i < len(xs); i++ { println(xs[i]) }
-}

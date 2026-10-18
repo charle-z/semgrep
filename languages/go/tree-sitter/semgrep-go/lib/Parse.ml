@@ -798,7 +798,6 @@ let children_regexps : (string * Run.exp option) list = [
         Token (Name "channel_type");
         Token (Name "function_type");
         Token (Name "pointer_type");
-        Token (Name "parenthesized_type");
       |];
     ];
   );
@@ -822,15 +821,6 @@ let children_regexps : (string * Run.exp option) list = [
       Seq [
         Token (Literal "~");
         Token (Name "pointer_type");
-      ];
-      Seq [
-        Opt (
-          Token (Literal "~");
-        );
-        Alt [|
-          Token (Name "parenthesized_type");
-          Token (Name "interface_type");
-        |];
       ];
     |];
   );
@@ -3562,10 +3552,6 @@ and trans_interface_nonstruct_pointer ((kind, body) : mt) : CST.interface_nonstr
                 `Poin_type (
                   trans_pointer_type (Run.matcher_token v)
                 )
-            | Alt (9, v) ->
-                `Paren_type (
-                  trans_parenthesized_type (Run.matcher_token v)
-                )
             | _ -> assert false
             )
           )
@@ -3628,30 +3614,6 @@ and trans_interface_nonstruct_type_term ((kind, body) : mt) : CST.interface_nons
                 (
                   Run.trans_token (Run.matcher_token v0),
                   trans_pointer_type (Run.matcher_token v1)
-                )
-            | _ -> assert false
-            )
-          )
-      | Alt (4, v) ->
-          `Opt_TILDE_choice_paren_type (
-            (match v with
-            | Seq [v0; v1] ->
-                (
-                  Run.opt
-                    (fun v -> Run.trans_token (Run.matcher_token v))
-                    v0
-                  ,
-                  (match v1 with
-                  | Alt (0, v) ->
-                      `Paren_type (
-                        trans_parenthesized_type (Run.matcher_token v)
-                      )
-                  | Alt (1, v) ->
-                      `Inte_type (
-                        trans_interface_type (Run.matcher_token v)
-                      )
-                  | _ -> assert false
-                  )
                 )
             | _ -> assert false
             )

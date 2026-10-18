@@ -499,18 +499,10 @@ and interface_nonstruct_type_term (env : env)
         | `Chan_type x -> simple_type env (`Chan_type x)
         | `Func_type x -> simple_type env (`Func_type x)
         | `Poin_type x -> simple_type env (`Poin_type x)
-        | `Paren_type x -> type_ env (`Paren_type x)
       in
       (None, TPtr (token env star, ty))
   | `TILDE_poin_type (tilde, ty) ->
       (Some (token env tilde), simple_type env (`Poin_type ty))
-  | `Opt_TILDE_choice_paren_type (tilde, term) ->
-      let ty =
-        match term with
-        | `Paren_type x -> type_ env (`Paren_type x)
-        | `Inte_type x -> simple_type env (`Inte_type x)
-      in
-      (Option.map (token env) tilde, ty)
 
 and struct_term (env : env) ((v1, v2) : CST.struct_term) : constraint_ =
   let tilde_opt, fty =

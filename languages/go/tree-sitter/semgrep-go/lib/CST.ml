@@ -490,27 +490,10 @@ and interface_nonstruct_type_term = [
           | `Chan_type of channel_type
           | `Func_type of function_type
           | `Poin_type of pointer_type
-          | `Paren_type of parenthesized_type
         ]
     )
   | `TILDE_poin_type of (Token.t (* "~" *) * pointer_type)
-  | `Opt_TILDE_choice_paren_type of (
-        Token.t (* "~" *) option
-      * [ `Paren_type of parenthesized_type | `Inte_type of interface_type ]
-    )
 ]
-
-and interface_type = (
-    Token.t (* "interface" *)
-  * Token.t (* "{" *)
-  * (
-        interface_body
-      * (anon_choice_LF_249c99f * interface_body) list (* zero or more *)
-      * anon_choice_LF_249c99f option
-    )
-      option
-  * Token.t (* "}" *)
-)
 
 and literal_element = [ `Exp of expression | `Lit_value of literal_value ]
 
@@ -548,8 +531,6 @@ and parameter_list = (
       option
   * Token.t (* ")" *)
 )
-
-and parenthesized_type = (Token.t (* "(" *) * type_ * Token.t (* ")" *))
 
 and pointer_type = (Token.t (* "*" *) * type_)
 
@@ -600,7 +581,17 @@ and simple_type = [
   | `Qual_type of qualified_type
   | `Poin_type of pointer_type
   | `Struct_type of struct_type
-  | `Inte_type of interface_type
+  | `Inte_type of (
+        Token.t (* "interface" *)
+      * Token.t (* "{" *)
+      * (
+            interface_body
+          * (anon_choice_LF_249c99f * interface_body) list (* zero or more *)
+          * anon_choice_LF_249c99f option
+        )
+          option
+      * Token.t (* "}" *)
+    )
   | `Array_type of array_type
   | `Slice_type of slice_type
   | `Map_type of map_type
@@ -686,7 +677,7 @@ and struct_type = (Token.t (* "struct" *) * field_declaration_list)
 
 and type_ = [
     `Simple_type of simple_type
-  | `Paren_type of parenthesized_type
+  | `Paren_type of (Token.t (* "(" *) * type_ * Token.t (* ")" *))
 ]
 
 and type_alias = (
@@ -1008,8 +999,19 @@ type interface_nonstruct_pointer (* inlined *) = (
       | `Chan_type of channel_type
       | `Func_type of function_type
       | `Poin_type of pointer_type
-      | `Paren_type of parenthesized_type
     ]
+)
+
+type interface_type (* inlined *) = (
+    Token.t (* "interface" *)
+  * Token.t (* "{" *)
+  * (
+        interface_body
+      * (anon_choice_LF_249c99f * interface_body) list (* zero or more *)
+      * anon_choice_LF_249c99f option
+    )
+      option
+  * Token.t (* "}" *)
 )
 
 type keyed_element (* inlined *) = (
@@ -1030,6 +1032,10 @@ type parameter_declaration (* inlined *) = (field_name_list option * type_)
 
 type parenthesized_expression (* inlined *) = (
     Token.t (* "(" *) * expression * Token.t (* ")" *)
+)
+
+type parenthesized_type (* inlined *) = (
+    Token.t (* "(" *) * type_ * Token.t (* ")" *)
 )
 
 type return_statement (* inlined *) = (
